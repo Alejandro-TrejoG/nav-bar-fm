@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.content{
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+body{
+    overflow-x: hidden;
+    &.nav-menu_visible{
+        overflow-y: hidden;
+    }
+    @include tablet{
+        overflow-y: scroll;
+    }
+    
+}

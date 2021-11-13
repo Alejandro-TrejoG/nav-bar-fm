@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+body.nav-menu_visible {
+  overflow-y: hidden;
+}
+@media (min-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 40rem;
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+@media (min-width: 768px) {
+  .header {
+    background-image: url("../images/desktop/image-hero.jpg");
+  }
+}
+
+.content-header {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .nav {
+    padding-top: 3rem;
+  }
+}
+.nav .nav-toggle {
+  flex: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: transparent;
+  border: none;
+  z-index: 11;
+}
+@media (min-width: 768px) {
+  .nav .nav-toggle {
+    display: none;
+  }
+}
+.nav .nav-toggle i {
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+}
+.nav .nav-bar {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0rem;
+  left: 100%;
+  z-index: 10;
+  flex: 0 0 100%;
+  display: none;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background: black;
+}
+@media (min-width: 768px) {
+  .nav .nav-bar {
+    height: fit-content;
+    display: flex;
+    position: static;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background: none;
+    z-index: 0;
+    flex: 3;
+  }
+}
+.nav .nav-bar.nav-menu_visible {
+  left: 0;
+  display: flex;
+  transition: all 0.3s;
+}
+
+.logo {
+  flex: 1;
+  z-index: 11;
+}
+.logo a {
+  color: white;
+  font-family: "Alata", sans-serif;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  margin-left: 2rem;
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 1rem;
+    font-family: "Alata", sans-serif;
+    font-weight: lighter;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    margin-left: 1.5rem;
+  }
+}
+.nav-link .link-line {
+  display: block;
+  position: relative;
+  top: 0.2rem;
+  height: 2px;
+  width: 0px;
+  background-color: white;
+  transition: all 250ms;
+}
+.nav-link:hover .link-line {
+  width: 100%;
+}
+
+.header-text {
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header-text {
+    justify-content: flex-start;
+  }
+}
+.header-text p {
+  display: block;
+  width: 35rem;
+  padding: 2rem;
+  border: 3px solid white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: white;
+}
+@media (min-width: 425px) {
+  .header-text p {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .header-text p {
+    width: 40rem;
+    font-size: 4.5rem;
+  }
+}
+
+.info {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .info {
+    display: block;
+    height: 30rem;
+  }
+}
+.info img {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .info img {
+    width: 60%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+.info .info-text {
+  margin-top: 3rem;
+  background-color: white;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .info .info-text {
+    position: relative;
+    width: 55%;
+    height: 65%;
+    left: 45%;
+    bottom: 75%;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    text-align: left;
+  }
+}
+.info .info-text h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .info .info-text h2 {
+    font-size: 3rem;
+  }
+}
+.info .info-text p {
+  margin-top: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 17.25px;
+  line-height: 25.5px;
+}
+
+.section-images {
+  margin-top: 10rem;
+}
+.section-images a {
+  width: fit-content;
+  height: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: all 0.25s ease-in-out;
+}
+.section-images a:hover {
+  background-color: black;
+  color: white;
+}
+
+.images-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.images-header h3 {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .images-header h3 {
+    width: max-content;
+    text-align: left;
+  }
+}
+.images-header a {
+  display: none;
+}
+@media (min-width: 768px) {
+  .images-header a {
+    display: flex;
+  }
+}
+
+.images-content {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.images-content .image:nth-of-type(1) {
+  background-image: url("../images/mobile/image-deep-earth.jpg");
+}
+.images-content .image:nth-of-type(2) {
+  background-image: url("../images/mobile/image-night-arcade.jpg");
+}
+.images-content .image:nth-of-type(3) {
+  background-image: url("../images/mobile/image-soccer-team.jpg");
+}
+.images-content .image:nth-of-type(4) {
+  background-image: url("../images/mobile/image-grid.jpg");
+}
+.images-content .image:nth-of-type(5) {
+  background-image: url("../images/mobile/image-from-above.jpg");
+}
+.images-content .image:nth-of-type(6) {
+  background-image: url("../images/mobile/image-pocket-borealis.jpg");
+}
+.images-content .image:nth-of-type(7) {
+  background-image: url("../images/mobile/image-curiosity.jpg");
+}
+.images-content .image:nth-of-type(8) {
+  background-image: url("../images/mobile/image-fisheye.jpg");
+}
+@media (min-width: 768px) {
+  .images-content a {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .images-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2%;
+  }
+  .images-content .image:nth-of-type(1) {
+    background-image: url("../images/desktop/image-deep-earth.jpg");
+  }
+  .images-content .image:nth-of-type(2) {
+    background-image: url("../images/desktop/image-night-arcade.jpg");
+  }
+  .images-content .image:nth-of-type(3) {
+    background-image: url("../images/desktop/image-soccer-team.jpg");
+  }
+  .images-content .image:nth-of-type(4) {
+    background-image: url("../images/desktop/image-grid.jpg");
+  }
+  .images-content .image:nth-of-type(5) {
+    background-image: url("../images/desktop/image-from-above.jpg");
+  }
+  .images-content .image:nth-of-type(6) {
+    background-image: url("../images/desktop/image-pocket-borealis.jpg");
+  }
+  .images-content .image:nth-of-type(7) {
+    background-image: url("../images/desktop/image-curiosity.jpg");
+  }
+  .images-content .image:nth-of-type(8) {
+    background-image: url("../images/desktop/image-fisheye.jpg");
+  }
+}
+@media (min-width: 1024px) {
+  .images-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 10rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .image {
+    height: 40rem;
+  }
+}
+@media (min-width: 1024px) {
+  .image {
+    height: 35rem;
+  }
+}
+.image .image-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.25s ease-out;
+}
+.image .image-content p {
+  width: 45%;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 2rem;
+  transition: all 0.25s ease-out;
+}
+@media (min-width: 768px) {
+  .image .image-content p {
+    width: 60%;
+    margin-left: 3rem;
+  }
+}
+.image:hover .image-content {
+  background: rgba(255, 255, 255, 0.5);
+}
+.image:hover p {
+  color: black;
+}
+
+.footer {
+  margin-top: 3rem;
+  background-color: black;
+}
+.footer .content-footer {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .footer .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer-nav .logo {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-nav .logo {
+    text-align: left;
+  }
+}
+.footer-nav .nav-under {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+@media (min-width: 768px) {
+  .footer-nav .nav-under {
+    max-width: 90%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-nav .nav-under {
+    max-width: 70%;
+  }
+}
+.footer-nav .nav-under .nav-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-family: "Alata", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  margin-left: 0;
+}
+.footer-social {
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  .footer-social {
+    align-items: flex-end;
+  }
+}
+.footer-social .footer-social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .footer-social .footer-social-links {
+    margin: 0;
+    width: 30%;
+  }
+}
+.footer-social .nav-link {
+  margin: 0 0;
+}
+@media (min-width: 768px) {
+  .footer-social .nav-link {
+    font-size: 1.6rem;
+  }
+}
+.footer-social .footer-rights {
+  margin: 1rem 0 3rem 0;
+  color: white;
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-social .footer-rights {
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,23 @@
+@mixin telefono {
+    @media (min-width:425px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (min-width:768px) {
+        @content
+    }
+}
+
+@mixin laptop {
+    @media (min-width:1024px) {
+        @content
+    }
+}
+
+@mixin laptopXL {
+    @media (min-width:1440px) {
+        @content
+    }
+}

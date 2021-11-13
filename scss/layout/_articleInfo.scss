@@ -1,0 +1,48 @@
+.info{
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    @include laptop{
+        display: block;
+        height: 30rem;
+    }
+    img{
+         width: 100%;
+         @include laptop{
+            width: 60%;
+            position: relative;
+            top: 0;
+            left: 0;
+         }
+    }
+
+    .info-text{
+        margin-top: 3rem;
+        background-color: $blanco;
+        text-align: center;
+        @include laptop{
+            position: relative;
+            width: 55%;
+            height: 65%;
+            left: 45%;
+            bottom: 75%;
+            padding-left: 5rem;
+            padding-top: 5rem;
+            text-align: left;
+        }
+        h2{
+            font-family: $font2;
+            text-transform: uppercase;
+            font-size: 2rem;
+            @include tablet{
+                font-size: 3rem;
+            }
+        }
+        p{
+            margin-top: 3rem;
+            font-family: $font2;
+            font-size: $fontSize * 1.15;
+            line-height: $fontSize * 1.7;
+        }
+    }
+}

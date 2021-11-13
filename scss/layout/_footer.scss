@@ -1,0 +1,91 @@
+.footer{
+    margin-top: 3rem;
+    background-color: $negro;
+    .content-footer{
+        display: flex;
+        flex-flow: column wrap;
+        padding: 2rem 0;
+    }
+    @include tablet{
+        .content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.footer-nav{
+
+    .logo{
+        text-align: center;
+        @include tablet{
+            text-align: left;
+        }
+    }
+    
+    .nav-under{
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: column wrap;
+        @include tablet{
+            max-width: 90%;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @include laptop{
+            max-width: 70%;
+        }
+
+        .nav-link{
+            display: inline-block;
+            font-size: 1rem;
+            font-family: $font1;
+            text-transform: capitalize;
+            text-align: center;
+            margin-left: 0;
+            @include tablet{
+                
+            }
+        }
+    }
+}
+
+.footer-social{
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    @include tablet{
+        align-items: flex-end;
+    }
+
+    .footer-social-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        @include tablet{
+            margin: 0;
+            width: 30%;
+        }
+    }
+
+    .nav-link{
+        margin: 0 0;
+        @include tablet{
+            font-size: 1.6rem;
+        }
+    }
+
+    .footer-rights{
+        margin: 1rem 0 3rem 0;
+        color: lighten($blanco, 90);
+        text-align: center;
+        font-family: $font1;
+        font-size: 1rem;
+        @include tablet{
+            margin: 1rem 0;
+        }
+    }
+}
